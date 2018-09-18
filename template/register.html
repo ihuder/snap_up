@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+<h1>This is a Register Page</h1>
+
+<form action="/user/register", method="post">
+   {% module xsrf_form_html() %}
+    <span>UserName </span><input type="text" value="uname" name="uname">
+    <span>Password </span><input type="password" value="upassword" name="upassword">
+    <span>{{errors}}</span>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
